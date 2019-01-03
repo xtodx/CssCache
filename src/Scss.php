@@ -44,7 +44,7 @@
      */
 
     namespace xtodx\csscache;
-    
+
     use xtodx\csscache\libs\ScssParser;
 
     class Scss

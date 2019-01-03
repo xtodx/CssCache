@@ -1,7 +1,7 @@
 {
     "name": "xtodx/csscache",
     "description": "CSSCache for DRON",
-    "license": "free",
+    "license": "AFL-1.1",
     "authors": [
         {
             "name": "Anton Kovalenko",
