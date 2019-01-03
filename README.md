@@ -2,4 +2,4 @@
 
 **Install**
 
-`composer require xtodx/csscache`
+`composer require xtodx/csscache dev-master`

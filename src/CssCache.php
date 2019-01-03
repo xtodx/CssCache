@@ -4,12 +4,12 @@
 
     class CssCache
     {
-        private $folder, $url, $files = array();
+        private $folder, $path, $files = array();
 
-        function __construct($folder, $url)
+        function __construct($folder, $path)
         {
             $this->folder = $folder;
-            $this->url = $url;
+            $this->path = $path;
         }
 
         public function includeCss($file)
@@ -24,35 +24,35 @@
 
         public function writeCss($name)
         {
-            if (file_exists($this->url . $this->folder . $name)) {
-                $ft = filemtime($this->url . $this->folder . $name);
+            if (file_exists($this->path . $this->folder . $name)) {
+                $ft = filemtime($this->path . $this->folder . $name);
             } else {
                 $ft = 0;
             }
             $tr = false;
             foreach ($this->files as $file) {
-                if (file_exists($this->url . $this->folder . $file[1])) {
-                    $time = filemtime($this->url . $this->folder . $file[1]);
+                if (file_exists($this->path . $this->folder . $file[1])) {
+                    $time = filemtime($this->path . $this->folder . $file[1]);
                     if ($time <> $ft || $tr) {
                         $tr = true;
                     }
                 }
             }
             if ($tr) {
-                $fp = fopen($this->url . $this->folder . $name, "w");
+                $fp = fopen($this->path . $this->folder . $name, "w");
                 $time = time();
                 $text = "/*$time*/";
                 foreach ($this->files as $file) {
                     if ($file[0] == "css") {
-                        $text .= file_get_contents($this->url . $this->folder . $file[1], true);
-                        touch($this->url . $this->folder . $file[1], $time);
+                        $text .= file_get_contents($this->path . $this->folder . $file[1], true);
+                        touch($this->path . $this->folder . $file[1], $time);
                     } elseif ($file[0] == "sass") {
                         $Compiler = new Scss();
-                        $sass = file_get_contents($this->url . $this->folder . $file[1], true);
+                        $sass = file_get_contents($this->path . $this->folder . $file[1], true);
                         //Use Indented syntax : SASS.
                         $compiled = $Compiler->compile($sass);   //Try to parse.
                         $text .= $compiled;
-                        touch($this->url . $this->folder . $file[1], $time);
+                        touch($this->path . $this->folder . $file[1], $time);
 
                     }
                 }
@@ -61,7 +61,7 @@
                 $text = str_replace(array('  ', '    ', '    '), ' ', $text);
                 fwrite($fp, $text);
                 fclose($fp);
-                touch($this->url . $this->folder . $name, $time);
+                touch($this->path . $this->folder . $name, $time);
             }
             echo "<link rel=\"stylesheet\" href=\"{$name}\">";
         }

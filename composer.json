@@ -1,21 +1,27 @@
 {
-    "name": "xtodx/csscache",
-    "description": "CSSCache for DRON",
-    "license": "AFL-1.1",
-    "authors": [
-        {
-            "name": "Anton Kovalenko",
-            "email": "tonylovepony@gmail.com"
-        }
-    ],
-    "minimum-stability":"dev",
-    "require": {
-        "php": ">=7.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.5"
-    },
-    "autoload": {
-        "classmap": ["src"]
+  "name": "xtodx/csscache",
+  "description": "CSSCache for DRON",
+  "keywords": [
+    "dron",
+    "core"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Anton Kovalenko",
+      "email": "tonylovepony@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  }
 }
