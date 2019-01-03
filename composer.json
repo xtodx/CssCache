@@ -1,0 +1,13 @@
+{
+    "name": "xtodx/csscache",
+    "description": "CSSCache for DRON",
+    "license": "free",
+    "authors": [
+        {
+            "name": "Anton Kovalenko",
+            "email": "tonylovepony@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
