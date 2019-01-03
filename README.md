@@ -1,3 +1,5 @@
 **My first composer package**
 
-_Sorry_
+**Install**
+
+`composer require xtodx/csscache`
