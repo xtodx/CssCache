@@ -2,7 +2,6 @@
 
     namespace xtodx\csscache;
 
-    use PHPUnit\Runner\Exception;
 
     class CssCache
     {
@@ -67,7 +66,7 @@
                     touch($this->path . $this->folder . $name, $time);
                 }
                 return $name;
-            } catch (Exception $exception) {
+            } catch (\Exception $exception) {
                 return false;
             }
         }
