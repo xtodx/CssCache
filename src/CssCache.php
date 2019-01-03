@@ -68,7 +68,6 @@
                 }
                 return $name;
             } catch (Exception $exception) {
-                echo $exception->getMessage();
                 return false;
             }
         }

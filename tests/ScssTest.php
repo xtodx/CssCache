@@ -36,7 +36,8 @@
         {
             return [
                 "okay" => [["css", "css"], ["scss", "scss"]],
-                "bad" => [["scss", "css"], ["css", "scss"]],
+                "okay2" => [["scss", "css"], ["css", "scss"]],
+                "bad" => [["scss", "badscss"], ["scss", "scss"]],
             ];
         }
 
