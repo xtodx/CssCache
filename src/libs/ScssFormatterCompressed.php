@@ -1,9 +1,8 @@
 <?php
 
-namespace system\modules\Scss;
+    namespace xtodx\csscache\libs;
 
 
-use system\modules\Scss\Scss;
 class ScssFormatterCompressed extends ScssFormatter {
     public $open = "{";
     public $tagSeparator = ",";

@@ -1,8 +1,6 @@
 <?php
 
-    namespace system\modules;
-
-    use system\App;
+    namespace xtodx\csscache;
 
     class CssCache
     {

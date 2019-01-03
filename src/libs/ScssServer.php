@@ -6,7 +6,7 @@
  * Time: 14:58
  */
 
-namespace system\modules\Scss;
+    namespace xtodx\csscache\libs;
 
 class ScssServer
 {

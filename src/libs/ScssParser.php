@@ -1,5 +1,5 @@
 <?php
-namespace system\modules\Scss;
+    namespace xtodx\csscache\libs;
 
 class ScssParser {
     static protected $precedence = array(
